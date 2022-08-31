@@ -42,7 +42,7 @@ btn_ingresar.addEventListener('click', () => {
             add_IVA = text_subtotal.value * 0.1;
         }
         else if(radio_excento.checked){
-            add_IVA = 0;
+            add_IVA = text_subtotal.value;
         }
         
     }
