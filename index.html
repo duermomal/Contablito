@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contablito</title>
+</head>
+
+<body>
+    <main>
+        <h1>Contablito</h1>
+        <form>
+            <div>
+                <label for="descripcion">Descripción</label>
+                <input type="text" name="descripcion" id="descripcion">
+            </div>
+            <div>
+                <label for="tipoTrans">Tipo de Transacción</label>
+                <input type="radio" id="compra" name="tipoTrans" value="c" checked> Compra
+                <input type="radio" id="venta" name="tipoTrans" value="v"> Venta
+            </div>
+            <div>
+                <label for="tipoIVA">Tipo IVA</label>
+                <input type="radio" id="basico" name="tipoIVA" value="b" checked> Básico
+                <input type="radio" id="minimo" name="tipoIVA" value="m"> Mínimo
+                <input type="radio" id="excento" name="tipoIVA" value="e"> Excento
+            </div>
+            <div>
+                <label for="subtotal">Subtotal($)</label>
+                <input type="number" name="subtot" id="subtotal">
+                <input type="button" id="ingresar" value="Ingresar">
+            </div>
+        </form>
+
+        <table class="tablas" id="agrego_tabla">
+            <tr>
+                <th>Descripcion</th>
+                <th>Tipo</th>
+                <th>Subtotal ($)</th>
+                <th>IVA ($)</th>
+                <th>Total (IVA inc)</th>
+            </tr>
+
+        </table>
+
+
+
+        <div class="abajo">
+            <p id="totVentas">Total Ventas:</p>
+            <p id="totCompras">Total Compras:</p>
+        </div>
+    </main>
+    <script src="escri.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+
+
+.tablas th {
+    border: 1px solid;
+}
+
+div {
+    margin: 10px;
+}
+
+.abajo  {
+    display: flex;
+}
