@@ -17,12 +17,12 @@ const p_totCompras = document.getElementById("totCompras");
 
 let add_TotVentas , add_totCompras;
 
-let add_Desc, add_tipoTrans, addSubTot, add_IVA, addTotIva;
+let add_Desc, add_tipoTrans, addSubTot, add_IVA, addTotIva, iva;
 
 
 btn_ingresar.addEventListener('click', () => {
 
-    add_Desc = text_descripcion.value;
+    
     if(text_descripcion.value.length && text_subtotal.value.length){
         //tipo
         if(radio_compra.checked){
@@ -36,15 +36,21 @@ btn_ingresar.addEventListener('click', () => {
         }
         //iva
         if(radio_basico.checked){
-            add_IVA = text_subtotal.value * 0.22;
+
+           iva = 0.22;
+
         }
         else if(radio_minimo.checked){
-            add_IVA = text_subtotal.value * 0.1;
+            iva = 0.1;
         }
         else if(radio_excento.checked){
-            add_IVA = text_subtotal.value;
+            iva = 1;
         }
-        
+        //iva total y descripcion
+        add_Desc = text_descripcion.value;
+        add_IVA = text_subtotal.value * iva; //el iva
+        addTotIva = text_subtotal.value * (1+iva); //el subtotal + iva
+
     }
     else{
         
